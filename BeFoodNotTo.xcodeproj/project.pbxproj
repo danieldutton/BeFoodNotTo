@@ -127,10 +127,34 @@
 		A5E60BF72684BB5A00003FEC /* BeFoodNotToTests */ = {
 			isa = PBXGroup;
 			children = (
-				A5E60BF82684BB5A00003FEC /* BeFoodNotToTests.swift */,
+				A5E60C012684BBAC00003FEC /* Model */,
+				A5E60C002684BBA400003FEC /* ViewModel */,
+				A5E60C022684BBB300003FEC /* Services */,
 				A5E60BFA2684BB5A00003FEC /* Info.plist */,
 			);
 			path = BeFoodNotToTests;
+			sourceTree = "<group>";
+		};
+		A5E60C002684BBA400003FEC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A5E60C012684BBAC00003FEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A5E60C022684BBB300003FEC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A5E60BF82684BB5A00003FEC /* BeFoodNotToTests.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
