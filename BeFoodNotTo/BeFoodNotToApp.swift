@@ -4,7 +4,7 @@ import SwiftUI
 struct BeFoodNotToApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FoodSearch()
         }
     }
 }
