@@ -11,7 +11,18 @@
 		A59FCE1C266A7CF300378003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59FCE1B266A7CF300378003 /* ContentView.swift */; };
 		A59FCE1E266A7D0100378003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59FCE1D266A7D0100378003 /* Assets.xcassets */; };
 		A59FCE21266A7D0100378003 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59FCE20266A7D0100378003 /* Preview Assets.xcassets */; };
+		A5E60BF92684BB5A00003FEC /* BeFoodNotToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60BF82684BB5A00003FEC /* BeFoodNotToTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5E60BFB2684BB5A00003FEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59FCE0E266A7CF300378003 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A59FCE15266A7CF300378003;
+			remoteInfo = BeFoodNotTo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A59FCE16266A7CF300378003 /* BeFoodNotTo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeFoodNotTo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,10 +31,20 @@
 		A59FCE1D266A7D0100378003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A59FCE20266A7D0100378003 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A59FCE22266A7D0100378003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5E60BF62684BB5A00003FEC /* BeFoodNotToTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeFoodNotToTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E60BF82684BB5A00003FEC /* BeFoodNotToTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeFoodNotToTests.swift; sourceTree = "<group>"; };
+		A5E60BFA2684BB5A00003FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A59FCE13266A7CF300378003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5E60BF32684BB5A00003FEC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				A59FCE18266A7CF300378003 /* BeFoodNotTo */,
+				A5E60BF72684BB5A00003FEC /* BeFoodNotToTests */,
 				A59FCE17266A7CF300378003 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				A59FCE16266A7CF300378003 /* BeFoodNotTo.app */,
+				A5E60BF62684BB5A00003FEC /* BeFoodNotToTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +124,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		A5E60BF72684BB5A00003FEC /* BeFoodNotToTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5E60BF82684BB5A00003FEC /* BeFoodNotToTests.swift */,
+				A5E60BFA2684BB5A00003FEC /* Info.plist */,
+			);
+			path = BeFoodNotToTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,6 +153,24 @@
 			productReference = A59FCE16266A7CF300378003 /* BeFoodNotTo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A5E60BF52684BB5A00003FEC /* BeFoodNotToTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5E60BFD2684BB5A00003FEC /* Build configuration list for PBXNativeTarget "BeFoodNotToTests" */;
+			buildPhases = (
+				A5E60BF22684BB5A00003FEC /* Sources */,
+				A5E60BF32684BB5A00003FEC /* Frameworks */,
+				A5E60BF42684BB5A00003FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5E60BFC2684BB5A00003FEC /* PBXTargetDependency */,
+			);
+			name = BeFoodNotToTests;
+			productName = BeFoodNotToTests;
+			productReference = A5E60BF62684BB5A00003FEC /* BeFoodNotToTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -132,6 +182,10 @@
 				TargetAttributes = {
 					A59FCE15266A7CF300378003 = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					A5E60BF52684BB5A00003FEC = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = A59FCE15266A7CF300378003;
 					};
 				};
 			};
@@ -149,6 +203,7 @@
 			projectRoot = "";
 			targets = (
 				A59FCE15266A7CF300378003 /* BeFoodNotTo */,
+				A5E60BF52684BB5A00003FEC /* BeFoodNotToTests */,
 			);
 		};
 /* End PBXProject section */
@@ -160,6 +215,13 @@
 			files = (
 				A59FCE21266A7D0100378003 /* Preview Assets.xcassets in Resources */,
 				A59FCE1E266A7D0100378003 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5E60BF42684BB5A00003FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +237,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5E60BF22684BB5A00003FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5E60BF92684BB5A00003FEC /* BeFoodNotToTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5E60BFC2684BB5A00003FEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A59FCE15266A7CF300378003 /* BeFoodNotTo */;
+			targetProxy = A5E60BFB2684BB5A00003FEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A59FCE23266A7D0100378003 /* Debug */ = {
@@ -338,6 +416,46 @@
 			};
 			name = Release;
 		};
+		A5E60BFE2684BB5A00003FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76BSGUF375;
+				INFOPLIST_FILE = BeFoodNotToTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.dandbutton.BeFoodNotToTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeFoodNotTo.app/BeFoodNotTo";
+			};
+			name = Debug;
+		};
+		A5E60BFF2684BB5A00003FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76BSGUF375;
+				INFOPLIST_FILE = BeFoodNotToTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.dandbutton.BeFoodNotToTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeFoodNotTo.app/BeFoodNotTo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -355,6 +473,15 @@
 			buildConfigurations = (
 				A59FCE26266A7D0100378003 /* Debug */,
 				A59FCE27266A7D0100378003 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5E60BFD2684BB5A00003FEC /* Build configuration list for PBXNativeTarget "BeFoodNotToTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5E60BFE2684BB5A00003FEC /* Debug */,
+				A5E60BFF2684BB5A00003FEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
