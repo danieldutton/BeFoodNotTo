@@ -2,6 +2,8 @@ import SwiftUI
 
 struct FoodSearch: View {
     
+    @StateObject var viewModel = FoodSearchViewModel()
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -10,7 +12,7 @@ struct FoodSearch: View {
                     Text("Do Something")
                 })
                 Button(action: {
-                    //update user location
+                    viewModel.getUserLocation()
                 }, label: {
                     Text("Get Location")
                 })

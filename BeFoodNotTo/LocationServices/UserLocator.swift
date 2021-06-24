@@ -21,6 +21,7 @@ class UserLocator: NSObject,  CLLocationManagerDelegate {
     }
     
     func startUpdatingUserLocation() {
+        locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
@@ -32,7 +33,7 @@ class UserLocator: NSObject,  CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //print("didUpdateLocations")
+        print("didUpdateLocations")
         locationManager.delegate = nil
         guard let location = locations.last else {
             //possible error
@@ -40,6 +41,7 @@ class UserLocator: NSObject,  CLLocationManagerDelegate {
         }
         reverseGeocoder.reverseGeocode(location: location)
             .receive(on: DispatchQueue.main)
+            .handleEvents(receiveOutput: { print($0)})
             .sink(receiveValue: {
                 self.userLocation.send($0)
             })
@@ -53,7 +55,7 @@ class UserLocator: NSObject,  CLLocationManagerDelegate {
             locationManager.requestWhenInUseAuthorization()
         case .authorizedWhenInUse, .authorizedAlways:
             print("LocationManager:- authorised")
-            //startUpdatingUserLocation()
+            startUpdatingUserLocation()
         case .denied, .restricted:
             //user denied permission on prompt
             //turned off locationServices permission in device settings

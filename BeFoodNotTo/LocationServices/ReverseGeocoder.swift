@@ -4,7 +4,7 @@ import Foundation
 import MapKit
 
 class ReverseGeocoder {
-    func reverseGeocode(location: CLLocation) -> Future<User, Never> {
+    func reverseGeocode(location: CLLocation) -> AnyPublisher<User, Never> {
         Future<User, Never> { promise in
             CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
                 if error != nil {
@@ -16,6 +16,6 @@ class ReverseGeocoder {
                     return promise(.success(User(test: "newt found")))
                 }
             })
-        }
+        }.eraseToAnyPublisher()
     }
 }

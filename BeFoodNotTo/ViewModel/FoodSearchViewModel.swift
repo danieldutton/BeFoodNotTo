@@ -6,6 +6,8 @@ class FoodSearchViewModel: ObservableObject {
     
     private var subscriptions = Set<AnyCancellable>()
     
+    private var userLocator = UserLocator()
+    
     @Published var establishments: Establishments = Establishments(
         establishments: [],
         meta: Meta(dataSource: "",
@@ -17,6 +19,10 @@ class FoodSearchViewModel: ObservableObject {
                    pageSize: 0,
                    pageNumber: 0),
         links: [])
+    
+    func getUserLocation() {
+        userLocator.startUpdatingUserLocation()
+    }
     
     func getEstablishments() {
         EstablishmentsService().getEstablishments()
