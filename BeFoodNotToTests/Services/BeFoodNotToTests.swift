@@ -10,6 +10,7 @@ class BeFoodNotToTests: XCTestCase {
 }
 
 class EstablishmentURLCreator {
+    //git status
     func createURL() -> URL {
         var urlComponents = URLComponents()
         
@@ -23,6 +24,7 @@ class EstablishmentURLCreator {
             URLQueryItem(name: "ratingKey", value: "")
         ]
         urlComponents.queryItems = queryItems
+        
         return urlComponents.url!
     }
 }
