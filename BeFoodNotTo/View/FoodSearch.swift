@@ -9,7 +9,11 @@ struct FoodSearch: View {
                 NavigationLink(destination: FoodResults(), label: {
                     Text("Do Something")
                 })
-                
+                Button(action: {
+                    //update user location
+                }, label: {
+                    Text("Get Location")
+                })
             }
         }
     }
