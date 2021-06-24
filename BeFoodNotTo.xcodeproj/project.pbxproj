@@ -52,8 +52,11 @@
 		A59FCE18266A7CF300378003 /* BeFoodNotTo */ = {
 			isa = PBXGroup;
 			children = (
+				A5E60BF02684BB0400003FEC /* Model */,
+				A5DDF22C266AB71B00436888 /* View */,
+				A5E60BEF2684BAFC00003FEC /* ViewModel */,
+				A5E60BF12684BB1700003FEC /* Services */,
 				A59FCE19266A7CF300378003 /* BeFoodNotToApp.swift */,
-				A59FCE1B266A7CF300378003 /* ContentView.swift */,
 				A59FCE1D266A7D0100378003 /* Assets.xcassets */,
 				A59FCE22266A7D0100378003 /* Info.plist */,
 				A59FCE1F266A7D0100378003 /* Preview Content */,
@@ -67,6 +70,35 @@
 				A59FCE20266A7D0100378003 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A5DDF22C266AB71B00436888 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A59FCE1B266A7CF300378003 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5E60BEF2684BAFC00003FEC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A5E60BF02684BB0400003FEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A5E60BF12684BB1700003FEC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
