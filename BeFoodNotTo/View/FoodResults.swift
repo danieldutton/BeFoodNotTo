@@ -4,8 +4,12 @@ import SwiftUI
 struct FoodResults: View {
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("FoodResults")
+            NavigationLink(destination: FoodDetails(), label: {
+                Text("Do Something")
+            })
+        }
     }
 }
 

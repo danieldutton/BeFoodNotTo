@@ -3,8 +3,14 @@ import SwiftUI
 struct FoodSearch: View {
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            VStack {
+                Text("FoodSearch")
+                NavigationLink(destination: FoodResults(), label: {
+                    Text("Do Something")
+                })
+            }
+        }
     }
 }
 
