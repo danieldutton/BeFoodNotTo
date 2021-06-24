@@ -1,32 +1,28 @@
-//
-//  BeFoodNotToTests.swift
-//  BeFoodNotToTests
-//
-//  Created by Daniel Dutton on 24/06/2021.
-//
-
 import XCTest
+
+@testable import BeFoodNotTo
 
 class BeFoodNotToTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_foo() {
+        
     }
+}
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+class EstablishmentURLCreator {
+    func createURL() -> URL {
+        var urlComponents = URLComponents()
+        
+        urlComponents.scheme = "https"
+        urlComponents.host = "api.ratings.food.gov.uk"
+        urlComponents.path = "/Establishments/basic"
+        let queryItems = [
+            URLQueryItem(name: "latitude", value: ""),
+            URLQueryItem(name: "longitude", value: ""),
+            URLQueryItem(name: "maxDistanceLimit", value: ""),
+            URLQueryItem(name: "ratingKey", value: "")
+        ]
+        urlComponents.queryItems = queryItems
+        return urlComponents.url!
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
