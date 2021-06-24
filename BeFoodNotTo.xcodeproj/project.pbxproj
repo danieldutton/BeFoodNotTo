@@ -22,6 +22,8 @@
 		A5E60C162684C0B500003FEC /* FoodDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C152684C0B500003FEC /* FoodDetails.swift */; };
 		A5E60C192684C29E00003FEC /* BusinessType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C182684C29E00003FEC /* BusinessType.swift */; };
 		A5E60C1B2684C2EC00003FEC /* BusinessTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C1A2684C2EC00003FEC /* BusinessTypes.swift */; };
+		A5E60C1F2684C3EC00003FEC /* SchemeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C1E2684C3EC00003FEC /* SchemeTypes.swift */; };
+		A5E60C212684C40E00003FEC /* SchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C202684C40E00003FEC /* SchemeType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		A5E60C152684C0B500003FEC /* FoodDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetails.swift; sourceTree = "<group>"; };
 		A5E60C182684C29E00003FEC /* BusinessType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessType.swift; sourceTree = "<group>"; };
 		A5E60C1A2684C2EC00003FEC /* BusinessTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTypes.swift; sourceTree = "<group>"; };
+		A5E60C1E2684C3EC00003FEC /* SchemeTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeTypes.swift; sourceTree = "<group>"; };
+		A5E60C202684C40E00003FEC /* SchemeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 			children = (
 				A5E60C172684C27F00003FEC /* BusinessTypes */,
 				A5E60C032684BDF700003FEC /* Establishments */,
+				A5E60C1D2684C3C700003FEC /* SchemeTypes */,
 				A5E60C1C2684C30000003FEC /* Shared */,
 			);
 			path = Model;
@@ -209,6 +214,15 @@
 				A5E60C0E2684BEAD00003FEC /* Meta.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		A5E60C1D2684C3C700003FEC /* SchemeTypes */ = {
+			isa = PBXGroup;
+			children = (
+				A5E60C1E2684C3EC00003FEC /* SchemeTypes.swift */,
+				A5E60C202684C40E00003FEC /* SchemeType.swift */,
+			);
+			path = SchemeTypes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,8 +333,10 @@
 				A5E60C162684C0B500003FEC /* FoodDetails.swift in Sources */,
 				A5E60C0F2684BEAD00003FEC /* Meta.swift in Sources */,
 				A5E60C112684C04C00003FEC /* FoodSearchViewModel.swift in Sources */,
+				A5E60C1F2684C3EC00003FEC /* SchemeTypes.swift in Sources */,
 				A5E60C0B2684BE8300003FEC /* Rel.swift in Sources */,
 				A5E60C192684C29E00003FEC /* BusinessType.swift in Sources */,
+				A5E60C212684C40E00003FEC /* SchemeType.swift in Sources */,
 				A5E60C1B2684C2EC00003FEC /* BusinessTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
