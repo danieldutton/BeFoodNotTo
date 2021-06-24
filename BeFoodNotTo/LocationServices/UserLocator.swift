@@ -1,8 +1,6 @@
 import Combine
 import CoreLocation
 
-
-
 class UserLocator: NSObject,  CLLocationManagerDelegate {
     var userLocation = PassthroughSubject<User, Never>()
     
