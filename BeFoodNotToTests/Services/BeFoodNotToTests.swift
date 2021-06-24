@@ -5,13 +5,13 @@ import XCTest
 class BeFoodNotToTests: XCTestCase {
 
     func test_foo() {
-        
+        "https://api.ratings.food.gov.uk/Establishments/basic?latitude=53.9086163&longitude=-3.0474559&maxDistance=2"
     }
 }
 
 class EstablishmentURLCreator {
     //git status
-    func createURL() -> URL {
+    func createURLFor(user: User) -> URL {
         var urlComponents = URLComponents()
         
         urlComponents.scheme = "https"

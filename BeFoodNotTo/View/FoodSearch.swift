@@ -3,6 +3,7 @@ import SwiftUI
 struct FoodSearch: View {
     
     @StateObject var viewModel = FoodSearchViewModel()
+    @State private var launchPreferences = false
     
     var body: some View {
         NavigationView {
@@ -22,7 +23,16 @@ struct FoodSearch: View {
                 
                 Text(viewModel.user.latLong.lat)
                 Text(viewModel.user.latLong.long)
+                Spacer()
+                Button(action: {
+                    launchPreferences.toggle()
+                }, label: {
+                    Text("Launch Preferences")
+                })
             }
+            .sheet(isPresented: $launchPreferences, content: {
+                FoodPreferences()
+            })
         }
     }
 }

@@ -27,6 +27,7 @@
 		A5E60C232684C4D900003FEC /* EstablishmentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C222684C4D900003FEC /* EstablishmentsService.swift */; };
 		A5E60C252684DD9500003FEC /* UserLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C242684DD9500003FEC /* UserLocator.swift */; };
 		A5E60C282684DE2E00003FEC /* ReverseGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C272684DE2E00003FEC /* ReverseGeocoder.swift */; };
+		A5E60C2A26850E9E00003FEC /* FoodPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C2926850E9E00003FEC /* FoodPreferences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		A5E60C222684C4D900003FEC /* EstablishmentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentsService.swift; sourceTree = "<group>"; };
 		A5E60C242684DD9500003FEC /* UserLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocator.swift; sourceTree = "<group>"; };
 		A5E60C272684DE2E00003FEC /* ReverseGeocoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseGeocoder.swift; sourceTree = "<group>"; };
+		A5E60C2926850E9E00003FEC /* FoodPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPreferences.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				A59FCE1B266A7CF300378003 /* FoodSearch.swift */,
 				A5E60C122684C07D00003FEC /* FoodResults.swift */,
 				A5E60C152684C0B500003FEC /* FoodDetails.swift */,
+				A5E60C2926850E9E00003FEC /* FoodPreferences.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				A5E60C192684C29E00003FEC /* BusinessType.swift in Sources */,
 				A5E60C212684C40E00003FEC /* SchemeType.swift in Sources */,
 				A5E60C1B2684C2EC00003FEC /* BusinessTypes.swift in Sources */,
+				A5E60C2A26850E9E00003FEC /* FoodPreferences.swift in Sources */,
 				A5E60C252684DD9500003FEC /* UserLocator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
