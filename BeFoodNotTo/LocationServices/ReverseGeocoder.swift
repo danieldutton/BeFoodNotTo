@@ -4,16 +4,16 @@ import Foundation
 import MapKit
 
 class ReverseGeocoder {
-    func reverseGeocode(location: CLLocation) -> Future<String, Never> {
-        Future<String, Never> { promise in
+    func reverseGeocode(location: CLLocation) -> Future<User, Never> {
+        Future<User, Never> { promise in
             CLGeocoder().reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
                 if error != nil {
-                    promise(.success("newt found"))
+                    promise(.success(User(test: "newt found")))
                 }
                 if let area = placemarks?.first?.administrativeArea {
-                    return promise(.success(area))
+                    return promise(.success(User(test: area)))
                 } else {
-                    return promise(.success("newt found"))
+                    return promise(.success(User(test: "newt found")))
                 }
             })
         }
