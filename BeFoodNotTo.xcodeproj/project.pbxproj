@@ -20,6 +20,8 @@
 		A5E60C112684C04C00003FEC /* FoodSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C102684C04C00003FEC /* FoodSearchViewModel.swift */; };
 		A5E60C132684C07D00003FEC /* FoodResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C122684C07D00003FEC /* FoodResults.swift */; };
 		A5E60C162684C0B500003FEC /* FoodDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C152684C0B500003FEC /* FoodDetails.swift */; };
+		A5E60C192684C29E00003FEC /* BusinessType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C182684C29E00003FEC /* BusinessType.swift */; };
+		A5E60C1B2684C2EC00003FEC /* BusinessTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C1A2684C2EC00003FEC /* BusinessTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		A5E60C102684C04C00003FEC /* FoodSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearchViewModel.swift; sourceTree = "<group>"; };
 		A5E60C122684C07D00003FEC /* FoodResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResults.swift; sourceTree = "<group>"; };
 		A5E60C152684C0B500003FEC /* FoodDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetails.swift; sourceTree = "<group>"; };
+		A5E60C182684C29E00003FEC /* BusinessType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessType.swift; sourceTree = "<group>"; };
+		A5E60C1A2684C2EC00003FEC /* BusinessTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +136,9 @@
 		A5E60BF02684BB0400003FEC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A5E60C172684C27F00003FEC /* BusinessTypes */,
 				A5E60C032684BDF700003FEC /* Establishments */,
+				A5E60C1C2684C30000003FEC /* Shared */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,11 +188,27 @@
 			children = (
 				A5E60C042684BE0C00003FEC /* Establishments.swift */,
 				A5E60C062684BE3000003FEC /* Establishment.swift */,
+			);
+			path = Establishments;
+			sourceTree = "<group>";
+		};
+		A5E60C172684C27F00003FEC /* BusinessTypes */ = {
+			isa = PBXGroup;
+			children = (
+				A5E60C1A2684C2EC00003FEC /* BusinessTypes.swift */,
+				A5E60C182684C29E00003FEC /* BusinessType.swift */,
+			);
+			path = BusinessTypes;
+			sourceTree = "<group>";
+		};
+		A5E60C1C2684C30000003FEC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
 				A5E60C082684BE6900003FEC /* Link.swift */,
 				A5E60C0A2684BE8300003FEC /* Rel.swift */,
 				A5E60C0E2684BEAD00003FEC /* Meta.swift */,
 			);
-			path = Establishments;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +320,8 @@
 				A5E60C0F2684BEAD00003FEC /* Meta.swift in Sources */,
 				A5E60C112684C04C00003FEC /* FoodSearchViewModel.swift in Sources */,
 				A5E60C0B2684BE8300003FEC /* Rel.swift in Sources */,
+				A5E60C192684C29E00003FEC /* BusinessType.swift in Sources */,
+				A5E60C1B2684C2EC00003FEC /* BusinessTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
