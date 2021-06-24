@@ -16,6 +16,12 @@ struct FoodSearch: View {
                 }, label: {
                     Text("Get Location")
                 })
+                Text(viewModel.user.streetName)
+                Text(viewModel.user.town)
+                Text(viewModel.user.country)
+                
+                Text(viewModel.user.latLong.lat)
+                Text(viewModel.user.latLong.long)
             }
         }
     }

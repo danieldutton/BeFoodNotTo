@@ -1,4 +1,5 @@
 import Combine
+import CoreLocation
 import Foundation
 import SwiftUI
 
@@ -7,6 +8,8 @@ class FoodSearchViewModel: ObservableObject {
     private var subscriptions = Set<AnyCancellable>()
     
     private var userLocator = UserLocator()
+    
+    @Published var user = User(streetName: "", town: "", country: "", latLong: (lat: "", long: ""))
     
     @Published var establishments: Establishments = Establishments(
         establishments: [],
@@ -21,6 +24,11 @@ class FoodSearchViewModel: ObservableObject {
         links: [])
     
     func getUserLocation() {
+        userLocator.userLocation
+            .sink(receiveValue: {
+                self.user = $0
+            })
+            .store(in: &subscriptions)
         userLocator.startUpdatingUserLocation()
     }
     
