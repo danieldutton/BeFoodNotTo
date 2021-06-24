@@ -24,6 +24,7 @@
 		A5E60C1B2684C2EC00003FEC /* BusinessTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C1A2684C2EC00003FEC /* BusinessTypes.swift */; };
 		A5E60C1F2684C3EC00003FEC /* SchemeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C1E2684C3EC00003FEC /* SchemeTypes.swift */; };
 		A5E60C212684C40E00003FEC /* SchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C202684C40E00003FEC /* SchemeType.swift */; };
+		A5E60C232684C4D900003FEC /* EstablishmentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E60C222684C4D900003FEC /* EstablishmentsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		A5E60C1A2684C2EC00003FEC /* BusinessTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTypes.swift; sourceTree = "<group>"; };
 		A5E60C1E2684C3EC00003FEC /* SchemeTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeTypes.swift; sourceTree = "<group>"; };
 		A5E60C202684C40E00003FEC /* SchemeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeType.swift; sourceTree = "<group>"; };
+		A5E60C222684C4D900003FEC /* EstablishmentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		A5E60BF12684BB1700003FEC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A5E60C222684C4D900003FEC /* EstablishmentsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				A5E60C0F2684BEAD00003FEC /* Meta.swift in Sources */,
 				A5E60C112684C04C00003FEC /* FoodSearchViewModel.swift in Sources */,
 				A5E60C1F2684C3EC00003FEC /* SchemeTypes.swift in Sources */,
+				A5E60C232684C4D900003FEC /* EstablishmentsService.swift in Sources */,
 				A5E60C0B2684BE8300003FEC /* Rel.swift in Sources */,
 				A5E60C192684C29E00003FEC /* BusinessType.swift in Sources */,
 				A5E60C212684C40E00003FEC /* SchemeType.swift in Sources */,
