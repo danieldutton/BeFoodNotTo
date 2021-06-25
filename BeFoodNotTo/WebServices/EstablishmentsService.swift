@@ -3,7 +3,7 @@ import Foundation
 
 class EstablishmentsService {
     //will need failure type in due course
-    func getEstablishments() -> AnyPublisher<Establishments, Error> {
+    func getEstablishments() -> AnyPublisher<Establishments, Never> {
         //to play with for now
         let url = URL(string: "https://api.ratings.food.gov.uk/Establishments/basic?latitude=53.9086163&longitude=-3.0474559&maxDistance=2")!
         
@@ -11,9 +11,12 @@ class EstablishmentsService {
         request.addValue("2", forHTTPHeaderField: "x-api-version")
         
         return URLSession.shared.dataTaskPublisher(for: request)
+            .receive(on: DispatchQueue.global())
             .map(\.data)
-            //.handleEvents(receiveOutput: {print($0)})
+            .handleEvents(receiveOutput: {print($0)})
             .decode(type: Establishments.self, decoder: JSONDecoder())
+            .replaceError(with: Establishments(establishments: []))
+            .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
 }

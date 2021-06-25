@@ -3,11 +3,11 @@ import SwiftUI
 
 struct FoodResults: View {
     
-    let establishments: Establishments
+    @ObservedObject var viewModel: FoodResultsViewModel
         
     var body: some View {
         VStack {
-            List(establishments.establishments) { establishment in
+            List(viewModel.establishments.establishments) { establishment in
                 NavigationLink(destination: FoodDetails(establishmentDetail: establishmentDetail), label: {
                     Text(establishment.businessName)
                     Spacer()

@@ -9,7 +9,7 @@ struct FoodSearch: View {
         NavigationView {
             VStack {
                 Text("FoodSearch")
-                NavigationLink(destination: FoodResults(establishments: previewEstablishments), label: {
+                NavigationLink(destination: FoodResults(viewModel: FoodResultsViewModel()), label: {
                     Text("Do Something")
                 })
                 Button(action: {

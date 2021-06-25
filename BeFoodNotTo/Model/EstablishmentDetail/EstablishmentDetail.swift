@@ -1,6 +1,5 @@
 import Foundation
 
-// MARK: - EstablishmentDetail
 struct EstablishmentDetail: Codable {
     let fhrsid, changesByServerID: Int
     let localAuthorityBusinessID, businessName, businessType: String
