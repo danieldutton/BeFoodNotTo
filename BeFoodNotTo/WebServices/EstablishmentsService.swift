@@ -12,7 +12,7 @@ class EstablishmentsService {
         
         return URLSession.shared.dataTaskPublisher(for: request)
             .map(\.data)
-            .handleEvents(receiveOutput: {print($0)})
+            //.handleEvents(receiveOutput: {print($0)})
             .decode(type: Establishments.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
@@ -20,7 +20,7 @@ class EstablishmentsService {
 
 class EstablishmentDetailService {
     //will need failure type in due course
-    func getEstablishmentDetails(fhrsid: Int) -> AnyPublisher<Establishments, Error> {
+    func getEstablishmentDetails(fhrsid: Int) -> AnyPublisher<EstablishmentDetail, Error> {
         //to play with for now
         //ishttp so might need transport info.plist addition
         let url = URL(string: "http://api.ratings.food.gov.uk/establishments/122188")!
@@ -31,7 +31,7 @@ class EstablishmentDetailService {
         return URLSession.shared.dataTaskPublisher(for: request)
             .map(\.data)
             .handleEvents(receiveOutput: {print($0)})
-            .decode(type: Establishments.self, decoder: JSONDecoder())
+            .decode(type: EstablishmentDetail.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
 }

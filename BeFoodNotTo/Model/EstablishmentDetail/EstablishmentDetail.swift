@@ -14,7 +14,7 @@ struct EstablishmentDetail: Codable {
     let schemeType: String
     let geocode: Geocode
     let rightToReply: String
-    let distance: Int //could be string
+    let distance: Int? //could be string
     let newRatingPending: Bool
     //let meta: Meta
     //let links: [Link]
