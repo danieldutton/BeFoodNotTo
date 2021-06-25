@@ -1,6 +1,16 @@
 import Combine
 import Foundation
 
+struct SearchParams {
+    
+}
+
+class URLBuilder {
+    func buildURLUsing(searchParams: SearchParams) -> URL {
+        return URL(string: "")!
+    }
+}
+
 class EstablishmentsService {
     //will need failure type in due course
     func getEstablishments() -> AnyPublisher<Establishments, Never> {
@@ -23,7 +33,7 @@ class EstablishmentsService {
 
 class EstablishmentDetailService {
     //will need failure type in due course
-    func getEstablishmentDetails(fhrsid: Int) -> AnyPublisher<EstablishmentDetail, Error> {
+    func getEstablishmentDetails(fhrsid: Int) -> AnyPublisher<EstablishmentDetail, Never> {
         //to play with for now
         //ishttp so might need transport info.plist addition
         let url = URL(string: "http://api.ratings.food.gov.uk/establishments/122188")!
@@ -32,9 +42,12 @@ class EstablishmentDetailService {
         request.addValue("2", forHTTPHeaderField: "x-api-version")
         
         return URLSession.shared.dataTaskPublisher(for: request)
+            .receive(on: DispatchQueue.global())
             .map(\.data)
             .handleEvents(receiveOutput: {print($0)})
             .decode(type: EstablishmentDetail.self, decoder: JSONDecoder())
+            .replaceError(with: establishmentDetail)
+            .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
 }

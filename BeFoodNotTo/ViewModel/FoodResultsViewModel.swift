@@ -6,6 +6,7 @@ class FoodResultsViewModel: ObservableObject {
     private var subscriptions = Set<AnyCancellable>()
     private var establishmentsService: EstablishmentsService
     
+    @Published var isPerformingWork = false
     @Published var establishments: Establishments = Establishments(establishments: [])
     
     

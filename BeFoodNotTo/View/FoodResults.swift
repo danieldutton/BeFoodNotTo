@@ -8,7 +8,7 @@ struct FoodResults: View {
     var body: some View {
         VStack {
             List(viewModel.establishments.establishments) { establishment in
-                NavigationLink(destination: FoodDetails(establishmentDetail: establishmentDetail), label: {
+                NavigationLink(destination: FoodDetails(viewModel: FoodDetailsViewModel()), label: {
                     Text(establishment.businessName)
                     Spacer()
                     Text(establishment.ratingValue)
