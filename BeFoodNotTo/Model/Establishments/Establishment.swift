@@ -4,7 +4,7 @@ struct Establishment: Codable {
     let fhrsid: Int
     let localAuthorityBusinessID: String
     let businessName: String
-    let businessType: String? //check this is a strign value as emitted jsonnull
+    let businessType: String?
     let ratingValue, ratingDate: String
     //let links: [Link]
     

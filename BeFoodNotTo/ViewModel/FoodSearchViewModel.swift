@@ -32,6 +32,10 @@ class FoodSearchViewModel: ObservableObject {
         userLocator.startUpdatingUserLocation()
     }
     
+    func getSavedSearchPreferences() {
+        //need to combine the two above
+    }
+    
     func getEstablishments() {
         EstablishmentsService().getEstablishments()
             .receive(on: DispatchQueue.main)

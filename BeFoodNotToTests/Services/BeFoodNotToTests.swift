@@ -9,6 +9,10 @@ class BeFoodNotToTests: XCTestCase {
     }
 }
 
+struct UserPreferences {
+    var user: User
+}
+
 class EstablishmentURLCreator {
     //git status
     func createURLFor(user: User) -> URL {
