@@ -11,17 +11,7 @@ class FoodSearchViewModel: ObservableObject {
     
     @Published var user = User(streetName: "", town: "", country: "", latLong: (lat: "", long: ""))
     
-    @Published var establishments: Establishments = Establishments(
-        establishments: [],
-        meta: Meta(dataSource: "",
-                   extractDate: "",
-                   itemCount: 0,
-                   returncode: "",
-                   totalCount: 0,
-                   totalPages: 0,
-                   pageSize: 0,
-                   pageNumber: 0),
-        links: [])
+    @Published var establishments = Establishments(establishments: [])
     
     func getUserLocation() {
         userLocator.userLocation
@@ -45,16 +35,6 @@ class FoodSearchViewModel: ObservableObject {
     }
     
     private func initialEmptyEstablishments() -> Establishments {
-        Establishments(
-            establishments: [],
-            meta: Meta(dataSource: "",
-                       extractDate: "",
-                       itemCount: 0,
-                       returncode: "",
-                       totalCount: 0,
-                       totalPages: 0,
-                       pageSize: 0,
-                       pageNumber: 0),
-            links: [])
+        Establishments(establishments: [])
     }
 }

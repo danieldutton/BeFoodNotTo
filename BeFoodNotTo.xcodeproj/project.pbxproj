@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A598B60C2685FAB2000C134D /* EstablishmentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A598B60B2685FAB2000C134D /* EstablishmentDetail.swift */; };
+		A598B60E2685FC41000C134D /* Geocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A598B60D2685FC41000C134D /* Geocode.swift */; };
+		A598B6102685FC5E000C134D /* Scores.swift in Sources */ = {isa = PBXBuildFile; fileRef = A598B60F2685FC5E000C134D /* Scores.swift */; };
 		A59FCE1A266A7CF300378003 /* BeFoodNotToApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59FCE19266A7CF300378003 /* BeFoodNotToApp.swift */; };
 		A59FCE1C266A7CF300378003 /* FoodSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59FCE1B266A7CF300378003 /* FoodSearch.swift */; };
 		A59FCE1E266A7D0100378003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59FCE1D266A7D0100378003 /* Assets.xcassets */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A598B60B2685FAB2000C134D /* EstablishmentDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentDetail.swift; sourceTree = "<group>"; };
+		A598B60D2685FC41000C134D /* Geocode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocode.swift; sourceTree = "<group>"; };
+		A598B60F2685FC5E000C134D /* Scores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scores.swift; sourceTree = "<group>"; };
 		A59FCE16266A7CF300378003 /* BeFoodNotTo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeFoodNotTo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59FCE19266A7CF300378003 /* BeFoodNotToApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeFoodNotToApp.swift; sourceTree = "<group>"; };
 		A59FCE1B266A7CF300378003 /* FoodSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearch.swift; sourceTree = "<group>"; };
@@ -86,6 +92,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A598B60A2685FA8A000C134D /* EstablishmentDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A598B60B2685FAB2000C134D /* EstablishmentDetail.swift */,
+				A598B60D2685FC41000C134D /* Geocode.swift */,
+				A598B60F2685FC5E000C134D /* Scores.swift */,
+			);
+			path = EstablishmentDetail;
+			sourceTree = "<group>";
+		};
 		A59FCE0D266A7CF300378003 = {
 			isa = PBXGroup;
 			children = (
@@ -150,8 +166,9 @@
 		A5E60BF02684BB0400003FEC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A5E60C172684C27F00003FEC /* BusinessTypes */,
 				A5E60C032684BDF700003FEC /* Establishments */,
+				A598B60A2685FA8A000C134D /* EstablishmentDetail */,
+				A5E60C172684C27F00003FEC /* BusinessTypes */,
 				A5E60C1D2684C3C700003FEC /* SchemeTypes */,
 				A5E60C1C2684C30000003FEC /* Shared */,
 			);
@@ -354,11 +371,14 @@
 				A5E60C0F2684BEAD00003FEC /* Meta.swift in Sources */,
 				A5E60C112684C04C00003FEC /* FoodSearchViewModel.swift in Sources */,
 				A5E60C282684DE2E00003FEC /* ReverseGeocoder.swift in Sources */,
+				A598B6102685FC5E000C134D /* Scores.swift in Sources */,
+				A598B60E2685FC41000C134D /* Geocode.swift in Sources */,
 				A5E60C1F2684C3EC00003FEC /* SchemeTypes.swift in Sources */,
 				A5E60C232684C4D900003FEC /* EstablishmentsService.swift in Sources */,
 				A5E60C0B2684BE8300003FEC /* Rel.swift in Sources */,
 				A5E60C192684C29E00003FEC /* BusinessType.swift in Sources */,
 				A5E60C212684C40E00003FEC /* SchemeType.swift in Sources */,
+				A598B60C2685FAB2000C134D /* EstablishmentDetail.swift in Sources */,
 				A5E60C1B2684C2EC00003FEC /* BusinessTypes.swift in Sources */,
 				A5E60C2A26850E9E00003FEC /* FoodPreferences.swift in Sources */,
 				A5E60C252684DD9500003FEC /* UserLocator.swift in Sources */,

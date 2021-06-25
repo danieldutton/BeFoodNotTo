@@ -3,6 +3,10 @@ import SwiftUI
 
 struct FoodResults: View {
     
+    let establishments = Establishments(establishments: [])
+        
+        
+    
     var body: some View {
         VStack {
             Text("FoodResults")
