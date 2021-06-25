@@ -10,6 +10,9 @@
 		A598B60C2685FAB2000C134D /* EstablishmentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A598B60B2685FAB2000C134D /* EstablishmentDetail.swift */; };
 		A598B60E2685FC41000C134D /* Geocode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A598B60D2685FC41000C134D /* Geocode.swift */; };
 		A598B6102685FC5E000C134D /* Scores.swift in Sources */ = {isa = PBXBuildFile; fileRef = A598B60F2685FC5E000C134D /* Scores.swift */; };
+		A598B61226860A72000C134D /* FoodResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A598B61126860A72000C134D /* FoodResultsViewModel.swift */; };
+		A598B61426860AA2000C134D /* FoodDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A598B61326860AA2000C134D /* FoodDetailsViewModel.swift */; };
+		A598B61626860AB9000C134D /* FoodPreferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A598B61526860AB9000C134D /* FoodPreferencesViewModel.swift */; };
 		A59FCE1A266A7CF300378003 /* BeFoodNotToApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59FCE19266A7CF300378003 /* BeFoodNotToApp.swift */; };
 		A59FCE1C266A7CF300378003 /* FoodSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59FCE1B266A7CF300378003 /* FoodSearch.swift */; };
 		A59FCE1E266A7D0100378003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59FCE1D266A7D0100378003 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 		A598B60B2685FAB2000C134D /* EstablishmentDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentDetail.swift; sourceTree = "<group>"; };
 		A598B60D2685FC41000C134D /* Geocode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geocode.swift; sourceTree = "<group>"; };
 		A598B60F2685FC5E000C134D /* Scores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scores.swift; sourceTree = "<group>"; };
+		A598B61126860A72000C134D /* FoodResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodResultsViewModel.swift; sourceTree = "<group>"; };
+		A598B61326860AA2000C134D /* FoodDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsViewModel.swift; sourceTree = "<group>"; };
+		A598B61526860AB9000C134D /* FoodPreferencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPreferencesViewModel.swift; sourceTree = "<group>"; };
 		A59FCE16266A7CF300378003 /* BeFoodNotTo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeFoodNotTo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59FCE19266A7CF300378003 /* BeFoodNotToApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeFoodNotToApp.swift; sourceTree = "<group>"; };
 		A59FCE1B266A7CF300378003 /* FoodSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearch.swift; sourceTree = "<group>"; };
@@ -159,6 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				A5E60C102684C04C00003FEC /* FoodSearchViewModel.swift */,
+				A598B61126860A72000C134D /* FoodResultsViewModel.swift */,
+				A598B61326860AA2000C134D /* FoodDetailsViewModel.swift */,
+				A598B61526860AB9000C134D /* FoodPreferencesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -378,10 +387,13 @@
 				A5E60C0B2684BE8300003FEC /* Rel.swift in Sources */,
 				A5E60C192684C29E00003FEC /* BusinessType.swift in Sources */,
 				A5E60C212684C40E00003FEC /* SchemeType.swift in Sources */,
+				A598B61226860A72000C134D /* FoodResultsViewModel.swift in Sources */,
 				A598B60C2685FAB2000C134D /* EstablishmentDetail.swift in Sources */,
 				A5E60C1B2684C2EC00003FEC /* BusinessTypes.swift in Sources */,
 				A5E60C2A26850E9E00003FEC /* FoodPreferences.swift in Sources */,
 				A5E60C252684DD9500003FEC /* UserLocator.swift in Sources */,
+				A598B61426860AA2000C134D /* FoodDetailsViewModel.swift in Sources */,
+				A598B61626860AB9000C134D /* FoodPreferencesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

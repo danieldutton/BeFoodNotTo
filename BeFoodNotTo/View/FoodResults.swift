@@ -18,6 +18,8 @@ struct FoodResults: View {
             List(establishments.establishments) { establishment in
                 NavigationLink(destination: FoodDetails(), label: {
                     Text(establishment.businessName)
+                    Spacer()
+                    Text(establishment.ratingValue)
                 })
             }
         }
