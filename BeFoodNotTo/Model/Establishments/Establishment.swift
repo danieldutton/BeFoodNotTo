@@ -1,6 +1,7 @@
 import Foundation
 
-struct Establishment: Codable {
+struct Establishment: Codable, Identifiable {
+    let id = UUID().uuidString
     let fhrsid: Int
     let localAuthorityBusinessID: String
     let businessName: String
