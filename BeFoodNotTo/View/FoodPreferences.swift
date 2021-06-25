@@ -1,8 +1,14 @@
 import SwiftUI
 
 struct FoodPreferences: View {
+    @State private var colors = ["Red", "Green", "Blue"]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Section(header: Text("Distance"), content: {
+                Text("Hello Section")
+            })
+        }
     }
 }
 
