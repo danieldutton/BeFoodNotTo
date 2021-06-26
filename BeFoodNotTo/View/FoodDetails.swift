@@ -14,6 +14,7 @@ struct FoodDetails: View {
             Text(viewModel.establishmentDetail.businessName)
             Text(viewModel.establishmentDetail.addressLine4)
             Text(viewModel.establishmentDetail.postCode)
+            //Text(viewModel.establishmentDetail.distance)
         }
     }
 }
