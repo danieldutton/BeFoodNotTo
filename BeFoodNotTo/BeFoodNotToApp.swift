@@ -6,7 +6,7 @@ struct BeFoodNotToApp: App {
     private var subscriptions = Set<AnyCancellable>()
     
     init() {
-        
+
     }
     
     var body: some Scene {

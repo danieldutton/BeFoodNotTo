@@ -16,6 +16,8 @@
 		A598B61826861085000C134D /* Preview_Placeholders.swift in Sources */ = {isa = PBXBuildFile; fileRef = A598B61726861085000C134D /* Preview_Placeholders.swift */; };
 		A598B61B26875389000C134D /* SortOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A598B61A26875389000C134D /* SortOptions.swift */; };
 		A598B61D268753F1000C134D /* SortOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = A598B61C268753F1000C134D /* SortOption.swift */; };
+		A598B61F2687549D000C134D /* EstablishmentDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A598B61E2687549D000C134D /* EstablishmentDetailService.swift */; };
+		A598B621268754DF000C134D /* SortOptionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A598B620268754DF000C134D /* SortOptionsService.swift */; };
 		A59FCE1A266A7CF300378003 /* BeFoodNotToApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59FCE19266A7CF300378003 /* BeFoodNotToApp.swift */; };
 		A59FCE1C266A7CF300378003 /* FoodSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59FCE1B266A7CF300378003 /* FoodSearch.swift */; };
 		A59FCE1E266A7D0100378003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59FCE1D266A7D0100378003 /* Assets.xcassets */; };
@@ -59,6 +61,8 @@
 		A598B61726861085000C134D /* Preview_Placeholders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview_Placeholders.swift; sourceTree = "<group>"; };
 		A598B61A26875389000C134D /* SortOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOptions.swift; sourceTree = "<group>"; };
 		A598B61C268753F1000C134D /* SortOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOption.swift; sourceTree = "<group>"; };
+		A598B61E2687549D000C134D /* EstablishmentDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstablishmentDetailService.swift; sourceTree = "<group>"; };
+		A598B620268754DF000C134D /* SortOptionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOptionsService.swift; sourceTree = "<group>"; };
 		A59FCE16266A7CF300378003 /* BeFoodNotTo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeFoodNotTo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59FCE19266A7CF300378003 /* BeFoodNotToApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeFoodNotToApp.swift; sourceTree = "<group>"; };
 		A59FCE1B266A7CF300378003 /* FoodSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSearch.swift; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				A5E60C222684C4D900003FEC /* EstablishmentsService.swift */,
+				A598B61E2687549D000C134D /* EstablishmentDetailService.swift */,
+				A598B620268754DF000C134D /* SortOptionsService.swift */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -387,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A598B621268754DF000C134D /* SortOptionsService.swift in Sources */,
 				A59FCE1C266A7CF300378003 /* FoodSearch.swift in Sources */,
 				A5E60C072684BE3000003FEC /* Establishment.swift in Sources */,
 				A59FCE1A266A7CF300378003 /* BeFoodNotToApp.swift in Sources */,
@@ -395,6 +402,7 @@
 				A5E60C092684BE6900003FEC /* Link.swift in Sources */,
 				A5E60C162684C0B500003FEC /* FoodDetails.swift in Sources */,
 				A5E60C0F2684BEAD00003FEC /* Meta.swift in Sources */,
+				A598B61F2687549D000C134D /* EstablishmentDetailService.swift in Sources */,
 				A598B61B26875389000C134D /* SortOptions.swift in Sources */,
 				A598B61826861085000C134D /* Preview_Placeholders.swift in Sources */,
 				A5E60C112684C04C00003FEC /* FoodSearchViewModel.swift in Sources */,
