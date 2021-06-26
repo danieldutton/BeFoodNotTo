@@ -22,6 +22,7 @@ class FoodDetailsViewModel: ObservableObject {
     
     func getEstablishmentDetails() {
         establishmentDetailService.getEstablishmentDetails(fhrsid: fhrsid)
+            .receive(on: DispatchQueue.main)
             .handleEvents(receiveOutput: { print($0)})
             .assign(to: \.establishmentDetail, on: self)
             .store(in: &subscriptions)

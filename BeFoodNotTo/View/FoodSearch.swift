@@ -3,45 +3,58 @@ import SwiftUI
 struct FoodSearch: View {
     
     @StateObject var viewModel = FoodSearchViewModel()
-    @State private var launchPreferences = false
+    private var businessTypes = ["Red", "Green", "Blue"]
+    private var maxDistanceMiles = ["100", "2", "3", "4", "5", "6", "7", "8", "9", "10", "15", "20"]
+    
+    @State private var selectedBusinessType = "Red"
+    @State private var selectedMaxDistanceMiles = "1"
+    
+    @State private var locationObtained = false
     
     var body: some View {
         NavigationView {
             VStack {
-                Text("FoodSearch")
-                NavigationLink(destination: FoodResults(viewModel: FoodResultsViewModel()), label: {
-                    Text("Do Something")
-                })
                 Button(action: {
                     viewModel.getUserLocation()
                 }, label: {
-                    Text("Get Location")
+                    Image(systemName: "location.circle.fill")
+                        .font(.system(size: 260))
+                        .foregroundColor(Color("Dark_Green"))
                 })
                 Text(viewModel.user.streetName)
                 Text(viewModel.user.town)
-                //Text(viewModel.user.country)
-                
-                Text(viewModel.user.latLong.lat)
-                Text(viewModel.user.latLong.long)
-                
-                Spacer()
-                
-                Button(action: {
-                    launchPreferences.toggle()
-                }, label: {
-                    Text("Launch Preferences")
-                })
+                Form {
+                    Picker("Business Type", selection: $selectedBusinessType) {
+                        ForEach(businessTypes, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    Picker("Max Distance", selection: $selectedMaxDistanceMiles) {
+                        ForEach(maxDistanceMiles, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    Picker("Sort By", selection: $selectedBusinessType) {
+                        ForEach(businessTypes, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                }
                 Button(action: {
                     //call viewModel and search
                 }, label: {
-                    Text("Perform Search")
+                    NavigationLink(destination: FoodResults(viewModel: FoodResultsViewModel()), label: {
+                        Text("Search")
+                    })
                 })
+                
+                //.disabled(locationObtained == false)
+                
             }
-            .sheet(isPresented: $launchPreferences, content: {
-                FoodPreferences()
-            })
+            .background(Color("Light_Green"))
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .edgesIgnoringSafeArea(.all)
     }
     
     private var previewEstablishments: Establishments {
@@ -55,6 +68,7 @@ struct FoodSearch: View {
             Establishment(fhrsid: 7, localAuthorityBusinessID: "", businessName: "Business 7", businessType: "Takeaway", ratingValue: "5", ratingDate: "date"),
         ])
     }
+    
 }
 
 struct FoodSearch_Previews: PreviewProvider {

@@ -1,9 +1,8 @@
 import Combine
 import Foundation
 
-class SortOptionsService {
-    //will need failure type in due course
-    func getSortOptions() -> AnyPublisher<SortOptions, Never> {
+class BusinessTypesService {
+    func getBusinessTypes() -> AnyPublisher<BusinessTypes, Never> {
         //to play with for now
         let url = URL(string: "https://api.ratings.food.gov.uk/SortOptions")!
         
@@ -14,8 +13,8 @@ class SortOptionsService {
             .receive(on: DispatchQueue.global())
             .map(\.data)
             .handleEvents(receiveOutput: {print($0)})
-            .decode(type: SortOptions.self, decoder: JSONDecoder())
-            .replaceError(with: SortOptions(sortOptions: []))
+            .decode(type: BusinessTypes.self, decoder: JSONDecoder())
+            .replaceError(with: BusinessTypes(businessTypes: []))
             .eraseToAnyPublisher()
     }
 }

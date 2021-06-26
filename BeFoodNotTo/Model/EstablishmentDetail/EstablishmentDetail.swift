@@ -48,6 +48,16 @@ struct EstablishmentDetail: Codable {
     }
 }
 
+import CoreLocation
+
+extension EstablishmentDetail {
+    var latLong: CLLocationCoordinate2D {
+        let result = CLLocationCoordinate2D(latitude: Double(geocode.latitude)!, longitude: Double(geocode.longitude)!)
+        print(result)
+        return result
+    }
+}
+
 
 
 

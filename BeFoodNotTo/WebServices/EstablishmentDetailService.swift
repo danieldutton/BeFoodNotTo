@@ -16,7 +16,6 @@ class EstablishmentDetailService {
             .handleEvents(receiveOutput: {print($0)})
             .decode(type: EstablishmentDetail.self, decoder: JSONDecoder())
             .replaceError(with: establishmentDetail)
-            .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
 }

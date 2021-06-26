@@ -17,6 +17,7 @@ class FoodResultsViewModel: ObservableObject {
     
     func getEstablishments() {
         establishmentsService.getEstablishments()
+            .receive(on: DispatchQueue.main)
             .assign(to: \.establishments, on: self)
             .store(in: &subscriptions)
     }

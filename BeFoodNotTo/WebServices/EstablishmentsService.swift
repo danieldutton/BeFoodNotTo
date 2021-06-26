@@ -15,6 +15,14 @@ class EstablishmentsService {
     //will need failure type in due course
     func getEstablishments() -> AnyPublisher<Establishments, Never> {
         //to play with for now
+        //latitude
+        //longitide
+        //maxDistanceLimit
+        //businessTypeId
+        //schemeTypeKey - FHRS or FHIS
+        //ratingKey - 0,1,2,3,4,5 - FHIS= 'Pass', 'ImprovementRequired', 'AwaitingPublication', 'AwaitingInspection', 'Exempt'
+        //ratingOperatorKey - 'LessThanOrEqual', 'GreaterThanOrEqual' and 'Equal',  Default val is equal.  These only work on FHRS
+        //countryId
         let url = URL(string: "https://api.ratings.food.gov.uk/Establishments?latitude=53.9086163&longitude=-3.0474559&maxDistance=2&BusinessTypeId=7844&sortOptionKey=distance")!
         //-1 all
         //7-distributors/transporters
@@ -40,7 +48,6 @@ class EstablishmentsService {
             //.handleEvents(receiveOutput: {print($0)})
             .decode(type: Establishments.self, decoder: JSONDecoder())
             .replaceError(with: Establishments(establishments: []))
-            .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
 }
