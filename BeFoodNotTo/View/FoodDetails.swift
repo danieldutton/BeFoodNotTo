@@ -2,19 +2,29 @@ import MapKit
 import SwiftUI
 
 struct FoodDetails: View {
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
-    
+
     @ObservedObject var viewModel: FoodDetailsViewModel
     
     var body: some View {
         VStack {
-            Map(coordinateRegion: .constant(MKCoordinateRegion(center: viewModel.establishmentDetail.latLong, span: MKCoordinateSpan(latitudeDelta: 0.0012, longitudeDelta: 0.0012))), interactionModes: [.all])
-                .frame(width: 400, height: 300)
-            
-            Spacer()
+            Map(coordinateRegion: .constant(MKCoordinateRegion(center: viewModel.establishmentDetail.latLong, span: MKCoordinateSpan(latitudeDelta: 0.0012, longitudeDelta: 0.0012))), interactionModes: [])
+                
             Text(viewModel.establishmentDetail.businessName)
             Text(viewModel.establishmentDetail.addressLine4)
             Text(viewModel.establishmentDetail.postCode)
+            Text(viewModel.establishmentDetail.phone)
+            Text(viewModel.establishmentDetail.ratingValue)
+            Form {
+                Section(header: Text("Confidence In Management"), content: {
+                    Text("\(viewModel.establishmentDetail.scores.confidenceInManagement)")
+                })
+                Section(header: Text("Hygiene"), content: {
+                    Text("\(viewModel.establishmentDetail.scores.hygiene)")
+                })
+                Section(header: Text("Structural"), content: {
+                    Text("\(viewModel.establishmentDetail.scores.structural)")
+                })
+            }
             //Text(viewModel.establishmentDetail.distance)
         }
     }

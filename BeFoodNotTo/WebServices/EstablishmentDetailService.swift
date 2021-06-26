@@ -3,9 +3,9 @@ import Foundation
 
 class EstablishmentDetailService {
     //will need failure type in due course
-    func getEstablishmentDetails(fhrsid: Int) -> AnyPublisher<EstablishmentDetail, Never> {
+    func getEstablishmentDetails(url: URL) -> AnyPublisher<EstablishmentDetail, Never> {
         //to play with for now
-        let url = URL(string: "http://api.ratings.food.gov.uk/establishments/\(fhrsid)")!
+        //let url = URL(string: "http://api.ratings.food.gov.uk/establishments/\(fhrsid)")!
         
         var request = URLRequest(url: url)
         request.addValue("2", forHTTPHeaderField: "x-api-version")

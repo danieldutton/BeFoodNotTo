@@ -7,7 +7,7 @@ struct Establishment: Codable, Identifiable {
     let businessName: String
     let businessType: String?
     let ratingValue, ratingDate: String
-    //let links: [Link]
+    let links: [Link]
     
     enum CodingKeys: String, CodingKey {
         case fhrsid = "FHRSID"
@@ -16,6 +16,6 @@ struct Establishment: Codable, Identifiable {
         case businessType = "BusinessType"
         case ratingValue = "RatingValue"
         case ratingDate = "RatingDate"
-        //case links
+        case links
     }
 }

@@ -7,21 +7,18 @@ class FoodDetailsViewModel: ObservableObject {
     private var establishmentDetailService: EstablishmentDetailService
     
     @Published var establishmentDetail: EstablishmentDetail = getEstablishmentDetail()
-    
-    var fhrsid = 0
-    
-    
+    var url = URL(string: "http://placeholder.gov.uk")!
+
     init(establishmentDetailService: EstablishmentDetailService = EstablishmentDetailService(),
-         fhrsid: Int) {
+         url: URL) {
         self.establishmentDetailService = establishmentDetailService
-        self.fhrsid = fhrsid
-        print("Constructor FHRSID:- \(fhrsid)")
+        self.url = url
         //possibly consider calling from onAppear (does it reload all the time
         getEstablishmentDetails()
     }
     
     func getEstablishmentDetails() {
-        establishmentDetailService.getEstablishmentDetails(fhrsid: fhrsid)
+            establishmentDetailService.getEstablishmentDetails(url: url)
             .receive(on: DispatchQueue.main)
             .handleEvents(receiveOutput: { print($0)})
             .assign(to: \.establishmentDetail, on: self)
