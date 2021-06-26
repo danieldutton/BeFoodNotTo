@@ -8,10 +8,12 @@ struct FoodDetails: View {
     
     var body: some View {
         VStack {
-            Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))), interactionModes: [])
-                .frame(width: 400, height: 300)
+            //Map(coordinateRegion: .constant(MKCoordinateRegion(center: //CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: //MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))), interactionModes: [])
+                //.frame(width: 400, height: 300)
             Spacer()
             Text(viewModel.establishmentDetail.businessName)
+            Text(viewModel.establishmentDetail.addressLine4)
+            Text(viewModel.establishmentDetail.postCode)
         }
     }
 }

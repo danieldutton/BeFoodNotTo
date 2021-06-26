@@ -41,6 +41,7 @@ struct FoodSearch: View {
                 FoodPreferences()
             })
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     private var previewEstablishments: Establishments {

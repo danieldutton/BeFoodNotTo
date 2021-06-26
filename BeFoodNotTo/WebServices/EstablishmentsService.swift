@@ -15,7 +15,7 @@ class EstablishmentsService {
     //will need failure type in due course
     func getEstablishments() -> AnyPublisher<Establishments, Never> {
         //to play with for now
-        let url = URL(string: "https://api.ratings.food.gov.uk/Establishments/basic?latitude=53.9086163&longitude=-3.0474559&maxDistance=2")!
+        let url = URL(string: "https://api.ratings.food.gov.uk/Establishments?latitude=53.9086163&longitude=-3.0474559&maxDistance=2")!
         
         var request = URLRequest(url: url)
         request.addValue("2", forHTTPHeaderField: "x-api-version")
@@ -23,7 +23,7 @@ class EstablishmentsService {
         return URLSession.shared.dataTaskPublisher(for: request)
             .receive(on: DispatchQueue.global())
             .map(\.data)
-            .handleEvents(receiveOutput: {print($0)})
+            //.handleEvents(receiveOutput: {print($0)})
             .decode(type: Establishments.self, decoder: JSONDecoder())
             .replaceError(with: Establishments(establishments: []))
             .receive(on: DispatchQueue.main)
@@ -36,7 +36,7 @@ class EstablishmentDetailService {
     func getEstablishmentDetails(fhrsid: Int) -> AnyPublisher<EstablishmentDetail, Never> {
         //to play with for now
         //ishttp so might need transport info.plist addition
-        let url = URL(string: "http://api.ratings.food.gov.uk/establishments/122188")!
+        let url = URL(string: "http://api.ratings.food.gov.uk/establishments/\(fhrsid)")!
         
         var request = URLRequest(url: url)
         request.addValue("2", forHTTPHeaderField: "x-api-version")
@@ -44,7 +44,7 @@ class EstablishmentDetailService {
         return URLSession.shared.dataTaskPublisher(for: request)
             .receive(on: DispatchQueue.global())
             .map(\.data)
-            .handleEvents(receiveOutput: {print($0)})
+            //.handleEvents(receiveOutput: {print($0)})
             .decode(type: EstablishmentDetail.self, decoder: JSONDecoder())
             .replaceError(with: establishmentDetail)
             .receive(on: DispatchQueue.main)
